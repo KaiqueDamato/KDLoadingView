@@ -8,7 +8,7 @@
 A beautiful loading indicator inspired by material design. 🤘🏻
 
 # Demo
-![alt tag](http://imgur.com/1UaWevH.gif)
+![alt tag](http://i.giphy.com/26BGPL4nO9C9LERri.gif)
 
 # Usage
 There are a few properties you may change:
@@ -29,4 +29,4 @@ Kaique Pantosi D'amato, kaiquedamato@icloud.com.
 
 ## License
 
-KDPulseButton is available under the MIT license. See the [License](https://github.com/KaiqueDamato/KDPulseButton/blob/master/LICENSE) file for more info.
+KDPulseButton is available under the MIT license. See the [License](https://github.com/KaiqueDamato/KDLoadingView/blob/master/LICENSE) file for more info.
