@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://twitter.com/KaiqueDamato"
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/KaiqueDamato/KDLoadingView.git", :tag => "1.0.0" }
-  s.source_files = "KDLoadingView", "KDLoadingView/**/*.{h,m}"
+  s.source_files = "KDLoadingView", "KDLoadingView/**/*.{h,m,swift}"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
 end
