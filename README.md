@@ -8,24 +8,28 @@
 A beautiful loading indicator inspired by material design. 🤘🏻
 
 # Demo
+
 ![alt tag](http://i.giphy.com/l44QxkFEfyVgnCl0I.gif)
 
 # Usage
+
 There are a few properties you may change:
 
-* **pulseColor** : the color of the pulse
-* **pulseRadius** : the radius of the pulse
-* **pulseDuration** : the duration of the pulse animation in seconds
-* **buttonColor** : the color of the button
-* **cornerRadius** : the radius of the button view
+* **firstColor** : the initial color of the loading
+* **secondColor** : the second color of the loading
+* **thirdColor** : the third color of the loading
+* **duration** : the duration of the loading animation
+* **lineWidth** : the width of the line
 
 All properties are ***IBInspectable*** so you can just drag and drop a new button, change the class and make all the configurations that you need in the Storyboard.
 
-I wish you a funny and happy coding. 🤓🚀
+I wish you a funny and happy coding. 🚀
+
+obs: you can set up to three colors in the loading but fell free to set just one or two if you like. 😄
 
 ## Author
 
-Kaique Pantosi D'amato, kaiquedamato@icloud.com.
+Kaique Pantosi D'amato, kaiquedamato@icloud.com.🤓
 
 ## License
 
