@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.1"
   s.summary      = "A beautiful loading indicator inspired by material design."
   s.description  = "The KDLoadingView is a completely customizable loading indicator that can be used in any iOS app."
-  s.homepage     = "https://twitter.com/KaiqueDamato"
+  s.homepage     = "https://github.com/KaiqueDamato/KDLoadingView"
   s.license      = "MIT"
   s.author       = { "Kaique Pantosi Damato" => "kaiquedamato@icloud.com" }
   s.social_media_url   = "https://twitter.com/KaiqueDamato"
