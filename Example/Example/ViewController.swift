@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var loadingView: KDLoadingView!
-
-    @IBOutlet var loading: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

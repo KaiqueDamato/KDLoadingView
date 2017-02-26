@@ -21,31 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzN-J8-UiM" customClass="KDLoadingView" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="sCj-5V-TJ2"/>
-                                    <constraint firstAttribute="height" constant="60" id="zDu-rw-hmT"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.078431372550000003" green="0.1595309999" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
-                                        <color key="value" red="0.33333333329999998" green="0.84313725490000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZp-Xh-gTB">
                                 <rect key="frame" x="164" y="610" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -53,17 +28,30 @@
                                     <action selector="animate" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkr-qX-h3b"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZP-nb-McV" customClass="KDLoadingView" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9hX-U0-swP"/>
+                                    <constraint firstAttribute="width" constant="60" id="ZkO-gh-njy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IZp-Xh-gTB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8vh-kg-eTz"/>
+                            <constraint firstItem="ZZP-nb-McV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EXY-Y3-Cse"/>
+                            <constraint firstItem="ZZP-nb-McV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRB-Hp-1vR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IZp-Xh-gTB" secondAttribute="bottom" constant="27" id="dvK-2J-Cy2"/>
-                            <constraint firstItem="KzN-J8-UiM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fnv-sQ-mp1"/>
-                            <constraint firstItem="KzN-J8-UiM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rwK-vd-5Kj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loadingView" destination="KzN-J8-UiM" id="iDD-M2-qA4"/>
+                        <outlet property="loadingView" destination="ZZP-nb-McV" id="ac1-Uw-ZeH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
