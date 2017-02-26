@@ -21,13 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZp-Xh-gTB">
-                                <rect key="frame" x="164" y="610" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="animate" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkr-qX-h3b"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZP-nb-McV" customClass="KDLoadingView" customModule="Example" customModuleProvider="target">
                                 <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -40,21 +33,75 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.2392156869" green="0.67450982329999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.21960784489999999" green="0.0078431377190000002" blue="0.85490196939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8t-2q-DSM" customClass="KDLoadingView" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="276" y="303" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="SDS-IC-5M3"/>
+                                    <constraint firstAttribute="height" constant="60" id="kSB-3l-PJD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.2392156869" green="0.67450982329999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.21960784489999999" green="0.0078431377190000002" blue="0.85490196939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
+                                        <color key="value" red="0.80784314869999996" green="0.027450980619999999" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-SN-6hs" customClass="KDLoadingView" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="39" y="303" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="JfG-8x-D2S"/>
+                                    <constraint firstAttribute="height" constant="60" id="gv8-xI-Kb5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.2392156869" green="0.67450982329999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IZp-Xh-gTB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8vh-kg-eTz"/>
                             <constraint firstItem="ZZP-nb-McV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EXY-Y3-Cse"/>
+                            <constraint firstItem="ZZP-nb-McV" firstAttribute="leading" secondItem="QPA-SN-6hs" secondAttribute="trailing" constant="58.5" id="NlS-UB-GEC"/>
                             <constraint firstItem="ZZP-nb-McV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRB-Hp-1vR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IZp-Xh-gTB" secondAttribute="bottom" constant="27" id="dvK-2J-Cy2"/>
+                            <constraint firstItem="QPA-SN-6hs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aIH-2E-2dv"/>
+                            <constraint firstItem="L8t-2q-DSM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dqU-0Y-QMV"/>
+                            <constraint firstItem="L8t-2q-DSM" firstAttribute="leading" secondItem="ZZP-nb-McV" secondAttribute="trailing" constant="58.5" id="pUL-0e-JyQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loadingView" destination="ZZP-nb-McV" id="ac1-Uw-ZeH"/>
+                        <outletCollection property="loadingViews" destination="QPA-SN-6hs" collectionClass="NSMutableArray" id="L00-hm-hE1"/>
+                        <outletCollection property="loadingViews" destination="ZZP-nb-McV" collectionClass="NSMutableArray" id="vXN-iJ-zQj"/>
+                        <outletCollection property="loadingViews" destination="L8t-2q-DSM" collectionClass="NSMutableArray" id="Dtw-Ya-lFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
