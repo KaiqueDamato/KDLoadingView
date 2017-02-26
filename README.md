@@ -8,7 +8,7 @@
 A beautiful loading indicator inspired by material design. 🤘🏻
 
 # Demo
-![alt tag](http://i.giphy.com/26BGPL4nO9C9LERri.gif)
+![alt tag](http://i.giphy.com/l44QxkFEfyVgnCl0I.gif)
 
 # Usage
 There are a few properties you may change:
