@@ -1,0 +1,6 @@
+framework module KDLoadingView {
+  umbrella header "KDLoadingView-umbrella.h"
+
+  export *
+  module * { export * }
+}

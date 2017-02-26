@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		678B96C287654B89C68C21A7 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22482418A5F7986FC45EDC1E /* Pods_Example.framework */; };
 		EC256FDB1E61FFEB008E79B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC256FDA1E61FFEB008E79B2 /* AppDelegate.swift */; };
 		EC256FDD1E61FFEB008E79B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC256FDC1E61FFEB008E79B2 /* ViewController.swift */; };
 		EC256FE01E61FFEB008E79B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC256FDE1E61FFEB008E79B2 /* Main.storyboard */; };
 		EC256FE21E61FFEB008E79B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC256FE11E61FFEB008E79B2 /* Assets.xcassets */; };
 		EC256FE51E61FFEB008E79B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC256FE31E61FFEB008E79B2 /* LaunchScreen.storyboard */; };
-		EC256FED1E6201E2008E79B2 /* KDLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC256FEC1E6201E2008E79B2 /* KDLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22482418A5F7986FC45EDC1E /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF960CB0662C67DF4D0492B2 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		EC256FD71E61FFEB008E79B2 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC256FDA1E61FFEB008E79B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC256FDC1E61FFEB008E79B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +25,7 @@
 		EC256FE11E61FFEB008E79B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC256FE41E61FFEB008E79B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC256FE61E61FFEB008E79B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC256FEC1E6201E2008E79B2 /* KDLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDLoadingView.swift; sourceTree = "<group>"; };
+		EFAD445661C8A0CD0F56D7AE /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678B96C287654B89C68C21A7 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		361708C0776F4F31E2E080D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22482418A5F7986FC45EDC1E /* Pods_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		954F6C3FA97230188F80A9FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFAD445661C8A0CD0F56D7AE /* Pods-Example.debug.xcconfig */,
+				CF960CB0662C67DF4D0492B2 /* Pods-Example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC256FCE1E61FFEB008E79B2 = {
 			isa = PBXGroup;
 			children = (
 				EC256FD91E61FFEB008E79B2 /* Example */,
 				EC256FD81E61FFEB008E79B2 /* Products */,
+				954F6C3FA97230188F80A9FF /* Pods */,
+				361708C0776F4F31E2E080D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				EC256FDA1E61FFEB008E79B2 /* AppDelegate.swift */,
-				EC256FEC1E6201E2008E79B2 /* KDLoadingView.swift */,
 				EC256FDC1E61FFEB008E79B2 /* ViewController.swift */,
 				EC256FDE1E61FFEB008E79B2 /* Main.storyboard */,
 				EC256FE11E61FFEB008E79B2 /* Assets.xcassets */,
@@ -74,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC256FE91E61FFEB008E79B2 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
+				B2997900C9478C43D25F8F32 /* [CP] Check Pods Manifest.lock */,
 				EC256FD31E61FFEB008E79B2 /* Sources */,
 				EC256FD41E61FFEB008E79B2 /* Frameworks */,
 				EC256FD51E61FFEB008E79B2 /* Resources */,
+				BBB9E78AC0D7795C231E0BB1 /* [CP] Embed Pods Frameworks */,
+				A396FDF6F10943066152CE9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,13 +159,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A396FDF6F10943066152CE9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2997900C9478C43D25F8F32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BBB9E78AC0D7795C231E0BB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EC256FD31E61FFEB008E79B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EC256FDD1E61FFEB008E79B2 /* ViewController.swift in Sources */,
-				EC256FED1E6201E2008E79B2 /* KDLoadingView.swift in Sources */,
 				EC256FDB1E61FFEB008E79B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +334,7 @@
 		};
 		EC256FEA1E61FFEB008E79B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAD445661C8A0CD0F56D7AE /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 66BPT5DT27;
@@ -276,6 +348,7 @@
 		};
 		EC256FEB1E61FFEB008E79B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF960CB0662C67DF4D0492B2 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 66BPT5DT27;
@@ -306,6 +379,7 @@
 				EC256FEB1E61FFEB008E79B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

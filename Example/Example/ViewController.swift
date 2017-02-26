@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KDLoadingView
 
 class ViewController: UIViewController {
     
