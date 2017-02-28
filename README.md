@@ -29,7 +29,7 @@ obs: you can set up to three colors in the loading but fell free to set just one
 
 ## Author
 
-Kaique Pantosi D'amato, kaiquedamato@icloud.com.🤓
+Kaique Pantosi D'amato, kaiquedamato@icloud.com. 🤓
 
 ## License
 
