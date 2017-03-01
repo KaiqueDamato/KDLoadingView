@@ -16,7 +16,7 @@ A beautiful loading indicator inspired by material design. 🤘🏻
 There are a few properties you may change:
 
 | Property         | Description                                                      | Type    | Default Value |
-|:-----------------|:----------------------------------------------------------------:|:-------:|--------------:|
+|:-----------------|:-----------------------------------------------------------------|:-------:|:--------------|
 | firstColor       | The initial color of the loading                                 | UIColor | UIColor.black |
 | secondColor      | The second color of the loading                                  | UIColor | nil           |
 | thirdColor       | The third color of the loading                                   | UIColor | nil           |
