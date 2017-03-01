@@ -15,11 +15,14 @@ A beautiful loading indicator inspired by material design. 🤘🏻
 
 There are a few properties you may change:
 
-* **firstColor** : the initial color of the loading
-* **secondColor** : the second color of the loading
-* **thirdColor** : the third color of the loading
-* **duration** : the duration of the loading animation
-* **lineWidth** : the width of the line
+| Property         | Description                                                      | Type    | Default Value |
+|:-----------------|:----------------------------------------------------------------:|:-------:|--------------:|
+| firstColor       | The initial color of the loading                                 | UIColor | UIColor.black |
+| secondColor      | The second color of the loading                                  | UIColor | nil           |
+| thirdColor       | The third color of the loading                                   | UIColor | nil           |
+| duration         | The duration of the loading animation                            | CGFloat | 3             | 
+| lineWidth        | The width of the line                                            | CGFloat | 1             |
+| hidesWhenStopped | Indicates if the loading must be hidden when the animation stops | Bool    | false         |
 
 All properties are ***IBInspectable*** so you can just drag and drop a new button, change the class and make all the configurations that you need in the Storyboard.
 
