@@ -24,7 +24,7 @@ There are a few properties you may change:
 | lineWidth        | The width of the line                                            | CGFloat | 1             |
 | hidesWhenStopped | Indicates if the loading must be hidden when the animation stops | Bool    | false         |
 
-All properties are ***IBInspectable*** so you can just drag and drop a new button, change the class and make all the configurations that you need in the Storyboard.
+All properties are ***IBInspectable*** so you can just drag and drop a new view, change the class and make all the configurations that you need in the Storyboard.
 
 I wish you a funny and happy coding. 🚀
 
