@@ -1,21 +1,12 @@
 PODS:
-  - KDLoadingView (1.0.2)
+  - KDLoadingView (1.0.3)
 
 DEPENDENCIES:
-  - KDLoadingView (from `https://github.com/KaiqueDamato/KDLoadingView.git`)
-
-EXTERNAL SOURCES:
-  KDLoadingView:
-    :git: https://github.com/KaiqueDamato/KDLoadingView.git
-
-CHECKOUT OPTIONS:
-  KDLoadingView:
-    :commit: 54d8e2bdeceeefd5fd06b28f7af8c818c1b93cf5
-    :git: https://github.com/KaiqueDamato/KDLoadingView.git
+  - KDLoadingView (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  KDLoadingView: a8ead5a7bb535fb18b7e16ca57fecc4a024195c3
+  KDLoadingView: 460ab41eca929e521eda18f13793057681ea5056
 
-PODFILE CHECKSUM: 911cc60750f1fac2a80b616762ccdc6d9cef5f4e
+PODFILE CHECKSUM: 04bc481af00d5971092e80b1f1579c28c6dcecfd
 
 COCOAPODS: 1.2.0

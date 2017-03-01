@@ -13,12 +13,12 @@ import UIKit
     fileprivate var shapeLayer = CAShapeLayer()
     fileprivate var animating = false
     
-    @IBInspectable public var firstColor: UIColor {
+    @IBInspectable public var firstColor: UIColor? {
         get {
-            return UIColor(cgColor:shapeLayer.strokeColor!)
+            return UIColor(cgColor:shapeLayer.strokeColor ?? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor)
         }
         set {
-            shapeLayer.strokeColor = newValue.cgColor
+            shapeLayer.strokeColor = newValue?.cgColor
         }
     }
     
@@ -28,7 +28,7 @@ import UIKit
     
     @IBInspectable public var duration: CGFloat = 3.0
     
-
+    
     @IBInspectable public var lineWidth: CGFloat {
         get {
             return shapeLayer.lineWidth
@@ -42,15 +42,7 @@ import UIKit
         return animating
     }
     
-    public var hidesWhenStopped = false {
-        didSet {
-            if hidesWhenStopped {
-                shapeLayer.opacity = 1
-            } else {
-                shapeLayer.opacity = 0
-            }
-        }
-    }
+    @IBInspectable public var hidesWhenStopped: Bool = false
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,7 +54,7 @@ import UIKit
         setup()
     }
     
-    public init(frame: CGRect, lineWidth: CGFloat, firstColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil, duration: CGFloat) {
+    public init(frame: CGRect, lineWidth: CGFloat, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor?, thirdColor: UIColor?, duration: CGFloat) {
         super.init(frame: frame)
         self.frame = frame
         self.firstColor = firstColor
@@ -71,17 +63,17 @@ import UIKit
         self.duration = duration
         shapeLayer.frame = frame
         shapeLayer.lineWidth = lineWidth
+        setup()
     }
-
-    func setup() {
+    
+    fileprivate func setup() {
         self.backgroundColor = UIColor.clear
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        shapeLayer.strokeColor = firstColor?.cgColor ?? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         shapeLayer.strokeStart = 0
         shapeLayer.strokeEnd = 1
         shapeLayer.lineWidth = lineWidth
-        
-        self.layer.addSublayer(shapeLayer)
+        isHidden = true
     }
     
     public override func layoutSubviews() {
@@ -94,6 +86,9 @@ import UIKit
         
         shapeLayer.path = bezierPath.cgPath
         shapeLayer.frame = self.bounds
+        isHidden = hidesWhenStopped
+        
+        self.layer.addSublayer(shapeLayer)
     }
     
     fileprivate func animateStrokeEnd() -> CABasicAnimation {
@@ -147,33 +142,33 @@ import UIKit
         animationGroup.fillMode = kCAFillModeBoth
         animationGroup.isRemovedOnCompletion = false
         animationGroup.repeatCount = Float.infinity
-      
+        
         shapeLayer.add(animationGroup, forKey: "loading")
     }
     
     public func startAnimating() {
         animating = true
-        self.layer.addSublayer(shapeLayer)
+        isHidden = false
         animateGroup()
     }
     
     public func stopAnimating() {
         animating = false
-        shapeLayer.removeFromSuperlayer()
+        isHidden = hidesWhenStopped
         shapeLayer.removeAllAnimations()
     }
     
-    func configureColors() -> [CGColor] {
+    fileprivate func configureColors() -> [CGColor] {
         var colors = [CGColor]()
         
-        colors.append(firstColor.cgColor)
+        colors.append(firstColor!.cgColor)
         if secondColor != nil { colors.append(secondColor!.cgColor) }
         if thirdColor != nil { colors.append(thirdColor!.cgColor) }
         
         return colors
     }
     
-    func configureKeyTimes(colors: [CGColor]) -> [NSNumber] {
+    fileprivate func configureKeyTimes(colors: [CGColor]) -> [NSNumber] {
         switch colors.count {
         case 1:
             return [0]

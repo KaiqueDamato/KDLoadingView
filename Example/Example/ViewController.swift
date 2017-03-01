@@ -13,10 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loadingView: KDLoadingView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadingView.hidesWhenStopped = true
-    }
     
     @IBAction func animate(_ sender: UIButton) {
         if loadingView.isAnimating {
