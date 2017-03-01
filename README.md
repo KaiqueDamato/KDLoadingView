@@ -28,7 +28,7 @@ All properties are ***IBInspectable*** so you can just drag and drop a new view,
 
 I wish you a funny and happy coding. 🚀
 
-obs: you can set up to three colors in the loading but fell free to set just one or two if you like. 😄
+obs: you can set up to three colors in the loading but feel free to set just one or two if you like. 😄
 
 ## Author
 
@@ -36,4 +36,4 @@ Kaique Pantosi D'amato, kaiquedamato@icloud.com. 🤓
 
 ## License
 
-KDPulseButton is available under the MIT license. See the [License](https://github.com/KaiqueDamato/KDLoadingView/blob/master/LICENSE) file for more info.
+KDLoadingView is available under the MIT license. See the [License](https://github.com/KaiqueDamato/KDLoadingView/blob/master/LICENSE) file for more info.
