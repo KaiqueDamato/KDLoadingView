@@ -183,7 +183,7 @@ import UIKit
 // Static Class Loading
 extension KDLoadingView {
     
-    public class func animate(lineWidth: CGFloat = 2.0, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
+    public class func animate(lineWidth: CGFloat = 2.0, size: CGFloat = 25, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
         if let window = UIApplication.shared.keyWindow {
             guard let topView = window.rootViewController?.view else {
                 return
@@ -192,10 +192,8 @@ extension KDLoadingView {
             // Blur View
             let blurView = KDLoadingBlurView(effect: UIBlurEffect(style: .light))
             blurView.frame = topView.frame
-                                    
-            let height = blurView.frame.height
-            let frame = CGRect(x: 0, y: 0, width: height / 10, height: height / 10)
             
+            let frame = CGRect(x: 0, y: 0, width: size, height: size)
             let loadingView = KDLoadingView(frame: frame)
             loadingView.center = blurView.center
             
