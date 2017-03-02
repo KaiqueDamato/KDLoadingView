@@ -222,7 +222,7 @@ extension KDLoadingView {
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = kCATransitionReveal
-        transition.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         toView.layer.add(transition, forKey: nil)
         fromView.addSubview(toView)
     }
