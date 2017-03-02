@@ -11,26 +11,103 @@ import XCTest
 
 class KDLoadingViewTests: XCTestCase {
     
+    var sut: KDLoadingView!
+    
+    let frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+    let lineWidth = CGFloat(3.0)
+    let firstColor = UIColor.gray
+    let secondColor  = UIColor.groupTableViewBackground
+    let thirdColor = UIColor.lightGray
+    let duration = CGFloat(1.0)
+    
     override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = KDLoadingView(frame: frame,
+                            lineWidth: lineWidth,
+                            firstColor: firstColor,
+                            secondColor: secondColor,
+                            thirdColor: thirdColor,
+                            duration: duration)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testInit() {
+
+        XCTAssertEqual(sut.frame, frame)
+        XCTAssertEqual(sut.lineWidth, lineWidth)
+        XCTAssertEqual(sut.firstColor, firstColor)
+        XCTAssertEqual(sut.secondColor, secondColor)
+        XCTAssertEqual(sut.thirdColor, thirdColor)
+        XCTAssertEqual(sut.duration, duration)
+        XCTAssertEqual(sut.isHidden, true)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testConfiguringLayer() {
+        
+        sut.layoutSubviews()
+        
+        guard let layer = sut.layer.sublayers?.first as? CAShapeLayer else {
+            XCTAssert(false, "It should have added a layer.")
+            return
         }
+        
+        XCTAssertEqual(layer.fillColor, UIColor.clear.cgColor)
+        XCTAssertEqual(layer.strokeColor, firstColor.cgColor)
+        XCTAssertEqual(layer.strokeStart, 0)
+        XCTAssertEqual(layer.strokeEnd, 1)
+        XCTAssertEqual(layer.lineWidth, lineWidth)
+        XCTAssertEqual(layer.frame, sut.bounds)
+    }
+    
+    func testAnimating() {
+        
+        sut.layoutSubviews()
+        sut.startAnimating()
+        
+        guard let layer = sut.layer.sublayers?.first as? CAShapeLayer,
+            let animationGroup = layer.animation(forKey: "loading") as? CAAnimationGroup else {
+                XCTAssert(false, "It should have an animationGroup")
+            return
+        }
+        
+        XCTAssertEqual(animationGroup.duration, CFTimeInterval(duration))
+        XCTAssertEqual(animationGroup.fillMode, kCAFillModeBoth)
+        XCTAssertEqual(animationGroup.isRemovedOnCompletion, false)
+        XCTAssertEqual(animationGroup.repeatCount, Float.infinity)
+        
+        guard let animations = animationGroup.animations,
+            let strokeEndAnimation = animations[0] as? CABasicAnimation,
+            let strokeStartAnimation = animations[1] as? CABasicAnimation,
+            let rotationAnimation = animations[2] as? CABasicAnimation,
+            let colorsAnimation = animations[3] as? CAKeyframeAnimation else {
+            XCTAssert(false, "It should have animations")
+            return
+        }
+        
+        XCTAssertEqual(strokeEndAnimation.keyPath, "strokeEnd")
+        XCTAssertEqual(strokeEndAnimation.beginTime, 0)
+        XCTAssertEqual(strokeEndAnimation.duration, CFTimeInterval(duration/2.0))
+        XCTAssertEqual(strokeEndAnimation.fromValue as? Int, 0)
+        XCTAssertEqual(strokeEndAnimation.toValue as? Int, 1)
+        XCTAssertEqual(strokeEndAnimation.timingFunction, CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
+        
+        
+        XCTAssertEqual(strokeStartAnimation.keyPath, "strokeStart")
+        XCTAssertEqual(strokeStartAnimation.beginTime, CFTimeInterval(duration/2.0))
+        XCTAssertEqual(strokeStartAnimation.duration, CFTimeInterval(duration/2.0))
+        XCTAssertEqual(strokeStartAnimation.fromValue as? Int, 0)
+        XCTAssertEqual(strokeStartAnimation.toValue as? Int, 1)
+        XCTAssertEqual(strokeStartAnimation.timingFunction, CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
+        
+        XCTAssertEqual(rotationAnimation.keyPath, "transform.rotation.z")
+        XCTAssertEqual(rotationAnimation.fromValue as? Int, 0)
+        XCTAssertEqual(rotationAnimation.toValue as? CGFloat, CGFloat(M_PI * 2.0))
+        XCTAssertEqual(rotationAnimation.timingFunction, CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear))
+        XCTAssertEqual(rotationAnimation.repeatCount, Float.infinity)
+    
+        XCTAssertEqual(colorsAnimation.keyPath, "strokeColor")
+        XCTAssertEqual(colorsAnimation.duration, CFTimeInterval(duration))
+        XCTAssertEqual(colorsAnimation.keyTimes!, [0, 0.5, 1])
+        XCTAssertEqual(colorsAnimation.values as! [CGColor], [firstColor.cgColor, secondColor.cgColor, thirdColor.cgColor])
+        XCTAssertEqual(colorsAnimation.repeatCount, Float.infinity)
     }
     
 }
