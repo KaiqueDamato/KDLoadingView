@@ -211,7 +211,7 @@ extension KDLoadingView {
             }
             
             for view in topView.subviews {
-                if view.isKind(of: KDLoadingBlurView.classForCoder()) {
+                if view.isKind(of: KDLoadingBlurView.self) {
                     removeLoadingBlurView(view as! KDLoadingBlurView)
                 }
             }
