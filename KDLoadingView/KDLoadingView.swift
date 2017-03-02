@@ -184,25 +184,24 @@ import UIKit
 extension KDLoadingView {
     
     public class func animate(lineWidth: CGFloat = 2.0, size: CGFloat = 25, duration: CGFloat = 3.0, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
-        if let window = UIApplication.shared.keyWindow {
-            guard let topView = window.rootViewController?.view else {
-                return
-            }
-            
-            // Blur View
-            let blurView = KDLoadingBlurView(effect: UIBlurEffect(style: .light))
-            blurView.frame = topView.frame
-            
-            let frame = CGRect(x: 0, y: 0, width: size, height: size)
-            let loadingView = KDLoadingView(frame: frame, lineWidth: lineWidth, firstColor: firstColor, secondColor: secondColor, thirdColor: thirdColor, duration: duration)
-            loadingView.center = blurView.center
-            
-            blurView.addSubview(loadingView)
-            loadingView.startAnimating()
-            blurView.loadingView = loadingView
-                        
-            addSubviewWithTransitionAnimation(fromView: topView, toView: blurView)
+        guard let window = UIApplication.shared.keyWindow,
+            let topView = window.rootViewController?.view else {
+            return
         }
+        
+        // Blur View
+        let blurView = KDLoadingBlurView(effect: UIBlurEffect(style: .light))
+        blurView.frame = topView.frame
+        
+        let frame = CGRect(x: 0, y: 0, width: size, height: size)
+        let loadingView = KDLoadingView(frame: frame, lineWidth: lineWidth, firstColor: firstColor, secondColor: secondColor, thirdColor: thirdColor, duration: duration)
+        loadingView.center = blurView.center
+        
+        blurView.addSubview(loadingView)
+        loadingView.startAnimating()
+        blurView.loadingView = loadingView
+        
+        addSubviewWithTransitionAnimation(fromView: topView, toView: blurView)
     }
     
     public class func stop() {
