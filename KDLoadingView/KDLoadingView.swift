@@ -183,7 +183,7 @@ import UIKit
 // Static Class Loading
 extension KDLoadingView {
     
-    public class func animate(lineWidth: CGFloat = 2.0, size: CGFloat = 25, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
+    public class func animate(lineWidth: CGFloat = 2.0, size: CGFloat = 25, duration: CGFloat = 3.0, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
         if let window = UIApplication.shared.keyWindow {
             guard let topView = window.rootViewController?.view else {
                 return
@@ -194,25 +194,14 @@ extension KDLoadingView {
             blurView.frame = topView.frame
             
             let frame = CGRect(x: 0, y: 0, width: size, height: size)
-            let loadingView = KDLoadingView(frame: frame)
+            let loadingView = KDLoadingView(frame: frame, lineWidth: lineWidth, firstColor: firstColor, secondColor: secondColor, thirdColor: thirdColor, duration: duration)
             loadingView.center = blurView.center
-            
-            //Configurations
-            loadingView.lineWidth = lineWidth
-            loadingView.firstColor = firstColor
-            loadingView.secondColor = secondColor
-            loadingView.thirdColor = thirdColor
             
             blurView.addSubview(loadingView)
             loadingView.startAnimating()
             blurView.loadingView = loadingView
-            
-            let transition = CATransition()
-            transition.duration = 0.3
-            transition.type = kCATransitionReveal
-            transition.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
-            blurView.layer.add(transition, forKey: nil)
-            topView.addSubview(blurView)
+                        
+            addSubviewWithTransitionAnimation(fromView: topView, toView: blurView)
         }
     }
     
@@ -228,6 +217,15 @@ extension KDLoadingView {
                 }
             }
         }
+    }
+    
+    private class func addSubviewWithTransitionAnimation(fromView: UIView, toView: UIView) {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionReveal
+        transition.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        toView.layer.add(transition, forKey: nil)
+        fromView.addSubview(toView)
     }
     
     private class func removeLoadingBlurView(_ view: KDLoadingBlurView) {
