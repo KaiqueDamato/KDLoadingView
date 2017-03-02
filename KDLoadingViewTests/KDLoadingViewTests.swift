@@ -110,4 +110,22 @@ class KDLoadingViewTests: XCTestCase {
         XCTAssertEqual(colorsAnimation.repeatCount, Float.infinity)
     }
     
+    func testStoppingAnimations() {
+        
+        sut.layoutSubviews()
+        
+        guard let layer = sut.layer.sublayers?.first as? CAShapeLayer else {
+            XCTAssert(false, "It should have a shapeLayer.")
+            return
+        }
+        
+        sut.startAnimating()
+        
+        XCTAssertNotNil(layer.animationKeys())
+        
+        sut.stopAnimating()
+        
+        XCTAssertNil(layer.animationKeys())
+    }
+    
 }
