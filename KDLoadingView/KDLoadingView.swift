@@ -179,3 +179,69 @@ import UIKit
         }
     }
 }
+
+// Static Class Loading
+extension KDLoadingView {
+    
+    public class func animate(lineWidth: CGFloat = 2.0, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
+        if let window = UIApplication.shared.keyWindow {
+            guard let topView = window.rootViewController?.view else {
+                return
+            }
+            
+            // Blur View
+            let blurView = KDLoadingBlurView(effect: UIBlurEffect(style: .light))
+            blurView.frame = topView.frame
+                                    
+            let height = blurView.frame.height
+            let frame = CGRect(x: 0, y: 0, width: height / 10, height: height / 10)
+            
+            let loadingView = KDLoadingView(frame: frame)
+            loadingView.center = blurView.center
+            
+            //Configurations
+            loadingView.lineWidth = lineWidth
+            loadingView.firstColor = firstColor
+            loadingView.secondColor = secondColor
+            loadingView.thirdColor = thirdColor
+            
+            blurView.addSubview(loadingView)
+            loadingView.startAnimating()
+            blurView.loadingView = loadingView
+            
+            let transition = CATransition()
+            transition.duration = 0.3
+            transition.type = kCATransitionReveal
+            transition.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+            blurView.layer.add(transition, forKey: nil)
+            topView.addSubview(blurView)
+        }
+    }
+    
+    public class func stop() {
+        if let window = UIApplication.shared.keyWindow {
+            guard let topView = window.rootViewController?.view else {
+                return
+            }
+            
+            for view in topView.subviews {
+                if view.isKind(of: KDLoadingBlurView.classForCoder()) {
+                    removeLoadingBlurView(view as! KDLoadingBlurView)
+                }
+            }
+        }
+    }
+    
+    private class func removeLoadingBlurView(_ view: KDLoadingBlurView) {
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
+            view.loadingView?.alpha = 0.0
+            view.alpha = 0.0
+        }, completion: { (_) in
+            view.removeFromSuperview()
+        })
+    }
+}
+
+private class KDLoadingBlurView: UIVisualEffectView {
+    public var loadingView : KDLoadingView?
+}
