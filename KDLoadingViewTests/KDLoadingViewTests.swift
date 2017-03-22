@@ -62,6 +62,8 @@ class KDLoadingViewTests: XCTestCase {
         sut.layoutSubviews()
         sut.startAnimating()
         
+        XCTAssertFalse(sut.isHidden)
+        
         guard let layer = sut.layer.sublayers?.first as? CAShapeLayer,
             let animationGroup = layer.animation(forKey: "loading") as? CAAnimationGroup else {
                 XCTAssert(false, "It should have an animationGroup")
@@ -179,6 +181,7 @@ class KDLoadingViewTests: XCTestCase {
     func testStoppingAnimations() {
         
         sut.layoutSubviews()
+        sut.hidesWhenStopped = true
         
         guard let layer = sut.layer.sublayers?.first as? CAShapeLayer else {
             XCTAssert(false, "It should have a shapeLayer.")
@@ -187,10 +190,12 @@ class KDLoadingViewTests: XCTestCase {
         
         sut.startAnimating()
         
+        XCTAssertFalse(sut.isHidden)
         XCTAssertNotNil(layer.animationKeys())
         
         sut.stopAnimating()
         
+        XCTAssert(sut.isHidden)
         XCTAssertNil(layer.animationKeys())
     }
     
