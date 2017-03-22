@@ -57,7 +57,7 @@ class KDLoadingViewTests: XCTestCase {
         XCTAssertEqual(layer.frame, sut.bounds)
     }
     
-    func testAnimating() {
+    func testAnimationGroup() {
         
         sut.layoutSubviews()
         sut.startAnimating()
@@ -73,11 +73,21 @@ class KDLoadingViewTests: XCTestCase {
         XCTAssertEqual(animationGroup.isRemovedOnCompletion, false)
         XCTAssertEqual(animationGroup.repeatCount, Float.infinity)
         
+    }
+    
+    func testStrokeEndAnimations() {
+    
+        sut.layoutSubviews()
+        sut.startAnimating()
+        
+        guard let layer = sut.layer.sublayers?.first as? CAShapeLayer,
+            let animationGroup = layer.animation(forKey: "loading") as? CAAnimationGroup else {
+                XCTAssert(false, "It should have an animationGroup")
+                return
+        }
+        
         guard let animations = animationGroup.animations,
-            let strokeEndAnimation = animations[0] as? CABasicAnimation,
-            let strokeStartAnimation = animations[1] as? CABasicAnimation,
-            let rotationAnimation = animations[2] as? CABasicAnimation,
-            let colorsAnimation = animations[3] as? CAKeyframeAnimation else {
+            let strokeEndAnimation = animations[0] as? CABasicAnimation else {
             XCTAssert(false, "It should have animations")
             return
         }
@@ -89,6 +99,24 @@ class KDLoadingViewTests: XCTestCase {
         XCTAssertEqual(strokeEndAnimation.toValue as? Int, 1)
         XCTAssertEqual(strokeEndAnimation.timingFunction, CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
         
+    }
+    
+    func testStrokeStartAnimation() {
+        
+        sut.layoutSubviews()
+        sut.startAnimating()
+        
+        guard let layer = sut.layer.sublayers?.first as? CAShapeLayer,
+            let animationGroup = layer.animation(forKey: "loading") as? CAAnimationGroup else {
+                XCTAssert(false, "It should have an animationGroup")
+                return
+        }
+        
+        guard let animations = animationGroup.animations,
+            let strokeStartAnimation = animations[1] as? CABasicAnimation else {
+                XCTAssert(false, "It should have animations")
+                return
+        }
         
         XCTAssertEqual(strokeStartAnimation.keyPath, "strokeStart")
         XCTAssertEqual(strokeStartAnimation.beginTime, CFTimeInterval(duration/2.0))
@@ -97,12 +125,50 @@ class KDLoadingViewTests: XCTestCase {
         XCTAssertEqual(strokeStartAnimation.toValue as? Int, 1)
         XCTAssertEqual(strokeStartAnimation.timingFunction, CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
         
+    }
+    
+    func testRotationAnimation() {
+        
+        sut.layoutSubviews()
+        sut.startAnimating()
+        
+        guard let layer = sut.layer.sublayers?.first as? CAShapeLayer,
+            let animationGroup = layer.animation(forKey: "loading") as? CAAnimationGroup else {
+                XCTAssert(false, "It should have an animationGroup")
+                return
+        }
+        
+        guard let animations = animationGroup.animations,
+            let rotationAnimation = animations[2] as? CABasicAnimation else {
+                XCTAssert(false, "It should have animations")
+                return
+        }
+    
         XCTAssertEqual(rotationAnimation.keyPath, "transform.rotation.z")
         XCTAssertEqual(rotationAnimation.fromValue as? Int, 0)
         XCTAssertEqual(rotationAnimation.toValue as? CGFloat, CGFloat(M_PI * 2.0))
         XCTAssertEqual(rotationAnimation.timingFunction, CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear))
         XCTAssertEqual(rotationAnimation.repeatCount, Float.infinity)
+        
+    }
     
+    func testColorsAnimation() {
+    
+        sut.layoutSubviews()
+        sut.startAnimating()
+        
+        guard let layer = sut.layer.sublayers?.first as? CAShapeLayer,
+            let animationGroup = layer.animation(forKey: "loading") as? CAAnimationGroup else {
+                XCTAssert(false, "It should have an animationGroup")
+                return
+        }
+        
+        guard let animations = animationGroup.animations,
+            let colorsAnimation = animations[3] as? CAKeyframeAnimation else {
+                XCTAssert(false, "It should have animations")
+                return
+        }
+        
         XCTAssertEqual(colorsAnimation.keyPath, "strokeColor")
         XCTAssertEqual(colorsAnimation.duration, CFTimeInterval(duration))
         XCTAssertEqual(colorsAnimation.keyTimes!, [0, 0.5, 1])
