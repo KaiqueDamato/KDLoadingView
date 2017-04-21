@@ -1,12 +1,12 @@
 PODS:
-  - KDLoadingView (1.0.3)
+  - KDLoadingView (1.0.4)
 
 DEPENDENCIES:
   - KDLoadingView (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  KDLoadingView: 460ab41eca929e521eda18f13793057681ea5056
+  KDLoadingView: fcb015daf91c245f0a212fd52b8061621f421dfe
 
 PODFILE CHECKSUM: 04bc481af00d5971092e80b1f1579c28c6dcecfd
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
