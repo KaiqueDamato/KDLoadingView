@@ -8,6 +8,6 @@
 
 import UIKit
 
-class KDLoadingBlurView: UIVisualEffectView {
+public class KDLoadingBlurView: UIVisualEffectView {
     public var loadingView : KDLoadingView?
 }
