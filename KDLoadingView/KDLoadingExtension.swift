@@ -13,8 +13,7 @@ extension KDLoadingView {
             let topView = window.rootViewController?.view else {
                 return
         }
-        
-        // Blur View
+                
         let blurView = KDLoadingBlurView(effect: UIBlurEffect(style: .light))
         blurView.frame = topView.frame
         
