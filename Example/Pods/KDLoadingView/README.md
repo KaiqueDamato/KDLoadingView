@@ -15,17 +15,20 @@ A beautiful loading indicator inspired by material design. 🤘🏻
 
 There are a few properties you may change:
 
-* **firstColor** : the initial color of the loading
-* **secondColor** : the second color of the loading
-* **thirdColor** : the third color of the loading
-* **duration** : the duration of the loading animation
-* **lineWidth** : the width of the line
+| Property         | Description                                                      | Type    | Default Value |
+|:-----------------|:-----------------------------------------------------------------|:--------|:--------------|
+| firstColor       | The initial color of the loading                                 | UIColor | UIColor.black |
+| secondColor      | The second color of the loading                                  | UIColor | nil           |
+| thirdColor       | The third color of the loading                                   | UIColor | nil           |
+| duration         | The duration of the loading animation                            | CGFloat | 3             | 
+| lineWidth        | The width of the line                                            | CGFloat | 1             |
+| hidesWhenStopped | Indicates if the loading must be hidden when the animation stops | Bool    | false         |
 
-All properties are ***IBInspectable*** so you can just drag and drop a new button, change the class and make all the configurations that you need in the Storyboard.
+All properties are ***IBInspectable*** so you can just drag and drop a new view, change the class and make all the configurations that you need in the Storyboard.
 
 I wish you a funny and happy coding. 🚀
 
-obs: you can set up to three colors in the loading but fell free to set just one or two if you like. 😄
+obs: you can set up to three colors in the loading but feel free to set just one or two if you like. 😄
 
 ## Author
 
@@ -33,4 +36,4 @@ Kaique Pantosi D'amato, kaiquedamato@icloud.com. 🤓
 
 ## License
 
-KDPulseButton is available under the MIT license. See the [License](https://github.com/KaiqueDamato/KDLoadingView/blob/master/LICENSE) file for more info.
+KDLoadingView is available under the MIT license. See the [License](https://github.com/KaiqueDamato/KDLoadingView/blob/master/LICENSE) file for more info.
