@@ -38,17 +38,24 @@ extension KDLoadingView {
     }
     
     public class func stop() {
-        if let window = UIApplication.shared.keyWindow {
-            guard let topView = window.rootViewController?.view else {
-                return
-            }
-            
-            for view in topView.subviews {
-                if view.isKind(of: KDLoadingBlurView.self) {
-                    removeLoadingBlurView(view as! KDLoadingBlurView)
-                }
-            }
+        
+        guard let window = UIApplication.shared.keyWindow else {
+            // If not has a UIWindow there isn't a ViewController to present loading
+            // e.g. the main view wasn't loaded yet
+            return
         }
+        
+        guard let topView = window.rootViewController?.view else  {
+            // If not has a RootViewController with a View there isn't a way to present loading
+            // e.g. the main view wasn't loaded yet
+            return
+        }
+        
+        for view in topView.subviews {
+            if view.isKind(of: KDLoadingBlurView.self) {
+                removeLoadingBlurView(view as! KDLoadingBlurView)
+            }
+        }        
     }
     
     private class func addSubviewWithTransitionAnimation(fromView: UIView, toView: UIView) {
