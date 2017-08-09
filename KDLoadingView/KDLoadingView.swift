@@ -82,7 +82,7 @@ import UIKit
         let center = CGPoint(x: self.bounds.size.width / 2.0, y: self.bounds.size.height / 2.0)
         let radius = min(self.bounds.size.width, self.bounds.size.height)/2.0 - self.shapeLayer.lineWidth / 2.0
         
-        let bezierPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: CGFloat(2 * M_PI), clockwise: true)
+        let bezierPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
         
         shapeLayer.path = bezierPath.cgPath
         shapeLayer.frame = self.bounds
@@ -116,7 +116,7 @@ import UIKit
     fileprivate func animateRotation() -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
-        animation.toValue = CGFloat(M_PI * 2.0)
+        animation.toValue = .pi * 2.0
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.repeatCount = Float.infinity
         
