@@ -9,10 +9,19 @@
 extension KDLoadingView {
     
     public class func animate(lineWidth: CGFloat = 2.0, size: CGFloat = 25, duration: CGFloat = 3.0, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
-        guard let window = UIApplication.shared.keyWindow,
-            let topView = window.rootViewController?.view else {
-                return
+        
+        guard let window = UIApplication.shared.keyWindow else {
+            // If not has a UIWindow there isn't a ViewController to present loading
+            // e.g. the main view wasn't loaded yet
+            return
         }
+        
+        guard let topView = window.rootViewController?.view else  {
+            // If not has a RootViewController with a View there isn't a way to present loading
+            // e.g. the main view wasn't loaded yet
+            return
+        }
+        
                 
         let blurView = KDLoadingBlurView(effect: UIBlurEffect(style: .light))
         blurView.frame = topView.frame
