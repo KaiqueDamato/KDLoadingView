@@ -7,16 +7,16 @@
 
 A beautiful loading indicator inspired by material design. 🤘🏻
 
-# Instalation
+## Instalation
 
-## CocoaPods
+### CocoaPods
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager, which automates and simplifies the process of using 3rd-party libraries like in your projects. See the ["Getting Started" guide for more information](http://cocoapods.org/). You can install it with the following command:
 
 
 	$ gem install cocoapods
 
-### Podfile
+#### Podfile
 
 To install it simply add the following line to your `Podfile`:
 
@@ -26,16 +26,15 @@ Then, run the following command:
 
 	$ pod install
 
-## Manually
+### Manually
 
 Download and drop the files in your project.
 
-
-# Demo
+## Demo
 
 ![alt tag](http://i.giphy.com/l44QxkFEfyVgnCl0I.gif)
 
-# Usage
+## Usage
 
 There are a few properties you may change:
 
@@ -54,10 +53,16 @@ I wish you a funny and happy coding. 🚀
 
 obs: you can set up to three colors in the loading but feel free to set just one or two if you like. 😄
 
-## Author
+### Author
 
 Kaique Pantosi D'amato, kaiquedamato@icloud.com. 🤓
 
-## License
+#### Colaborators
+
+Rodrigo Soldi, rodrigosoldi@icloud.com. 🎹
+
+Emannuel Fernandes, emannuel.carvalho@icloud.com. 👴🏼
+
+### License
 
 KDLoadingView is available under the MIT license. See the [License](https://github.com/KaiqueDamato/KDLoadingView/blob/master/LICENSE) file for more info.
