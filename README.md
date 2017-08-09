@@ -7,6 +7,30 @@
 
 A beautiful loading indicator inspired by material design. 🤘🏻
 
+# Instalation
+
+## CocoaPods
+
+[CocoaPods](http://cocoapods.org/) is a dependency manager, which automates and simplifies the process of using 3rd-party libraries like in your projects. See the ["Getting Started" guide for more information](http://cocoapods.org/). You can install it with the following command:
+
+
+	$ gem install cocoapods
+
+### Podfile
+
+To install it simply add the following line to your `Podfile`:
+
+	pod 'KDLoadingView'
+
+Then, run the following command:
+
+	$ pod install
+
+## Manually
+
+Download and drop the files in your project.
+
+
 # Demo
 
 ![alt tag](http://i.giphy.com/l44QxkFEfyVgnCl0I.gif)
