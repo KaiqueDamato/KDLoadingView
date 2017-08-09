@@ -52,10 +52,10 @@ extension KDLoadingView {
         }
         
         for view in topView.subviews {
-            if view.isKind(of: KDLoadingBlurView.self) {
-                removeLoadingBlurView(view as! KDLoadingBlurView)
+            if let blurView = view as? KDLoadingBlurView {
+                removeLoadingBlurView(blurView)
             }
-        }        
+        }
     }
     
     private class func addSubviewWithTransitionAnimation(fromView: UIView, toView: UIView) {
