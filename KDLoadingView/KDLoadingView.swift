@@ -97,7 +97,7 @@ import UIKit
         animation.duration = CFTimeInterval(duration / 2.0)
         animation.fromValue = 0
         animation.toValue = 1
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         return animation
     }
@@ -108,7 +108,7 @@ import UIKit
         animation.duration = CFTimeInterval(duration / 2.0)
         animation.fromValue = 0
         animation.toValue = 1
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         return animation
     }
@@ -117,7 +117,7 @@ import UIKit
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
         animation.toValue = .pi * 2.0
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.repeatCount = Float.infinity
         
         return animation
@@ -139,7 +139,7 @@ import UIKit
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [animateStrokeEnd(), animateStrokeStart(), animateRotation(), animateColors()]
         animationGroup.duration = CFTimeInterval(duration)
-        animationGroup.fillMode = kCAFillModeBoth
+        animationGroup.fillMode = CAMediaTimingFillMode.both
         animationGroup.isRemovedOnCompletion = false
         animationGroup.repeatCount = Float.infinity
         
