@@ -8,7 +8,7 @@
 
 extension KDLoadingView {
     
-    public class func animate(lineWidth: CGFloat = 2.0, size: CGFloat = 25, duration: CGFloat = 3.0, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
+    public class func animate(blurStyle: UIBlurEffect.Style = .light, lineWidth: CGFloat = 2.0, size: CGFloat = 25, duration: CGFloat = 3.0, firstColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), secondColor: UIColor? = nil, thirdColor: UIColor? = nil) {
         
         guard let window = UIApplication.shared.keyWindow else {
             // If not has a UIWindow there isn't a ViewController to present loading
@@ -23,7 +23,7 @@ extension KDLoadingView {
         }
         
                 
-        let blurView = KDLoadingBlurView(effect: UIBlurEffect(style: .light))
+        let blurView = KDLoadingBlurView(style: blurStyle)
         blurView.frame = topView.frame
         
         let frame = CGRect(x: 0, y: 0, width: size, height: size)

@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00517285D6FD697C5537AACC9744DDBE /* KDLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 779FF57B0DFC023D91CF1E315E5F9667 /* KDLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		029F30513B463DFE4E2055188EAA5AC5 /* KDLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0112F958F14CD0D2EFEFC2A8615B0AE0 /* KDLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16562A29CC6CD77104D75BB360CFBEE5 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D3FE98E9F2D34863BD3F3597A0485A /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50A26E608C8E6AD8E10EF63868779B50 /* KDLoadingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FBC52BC631B1FDD0B608A4EB71BCC /* KDLoadingView-dummy.m */; };
-		7C034EEE2E094B90C2EBF1A306ED0C4D /* KDLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBF4EB14D252F8A8ED1D77B1873746D /* KDLoadingView.swift */; };
-		91619622B24017CB972750434F438FB8 /* KDLoadingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A66B31C02E5A97E8CD4D77839E80BF65 /* KDLoadingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31FCB5C5FD8806511FD97A2BF0B08B3D /* KDLoadingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C3CAABC98F3EB8E3AE6BFC5F736EC4 /* KDLoadingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C03546D2C09265D605327C645A6E10F /* KDLoadingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5777EC60FC17F4B9B1CD7E95A64D4B6B /* KDLoadingExtension.swift */; };
+		443281B58870DDDF9B87ABB77166842F /* KDLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5322EC41F20B738353827041A89D013 /* KDLoadingView.swift */; };
+		4BE8D2AD521D948F0F4BD08A84ABCEAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		52BC76742BC5F43D3E1483F07CFAE805 /* KDLoadingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906E1D12338DBBA7FEB55F747832183 /* KDLoadingView-dummy.m */; };
+		615639BD55A120A3496A4C81A33D6083 /* KDLoadingBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBF5DD0015D6E7693903FF3A771BE /* KDLoadingBlurView.swift */; };
 		9F8B42B1971CF74021D45869D6EB481D /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD65E35A3233FBE6F2EFDEB3D43D114 /* Pods-Example-dummy.m */; };
-		DC7C395F92D01432819E6B2A5CD713B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E4510D1A63C19A56758048389D1EF409 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CA374434C81B8FED78E8E2DDD1D9498A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,42 +24,47 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E20303113125269CAA56A76DB7C1279A;
+			remoteGlobalIDString = B8AB136850109C737B375912AEEC0F18;
 			remoteInfo = KDLoadingView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0112F958F14CD0D2EFEFC2A8615B0AE0 /* KDLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KDLoadingView.h; path = KDLoadingView/KDLoadingView.h; sourceTree = "<group>"; };
 		044AA3E23F71470C9B5F50D44720EA0D /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
 		11434BC759D12F57876FBB74A4775E74 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		13C3CAABC98F3EB8E3AE6BFC5F736EC4 /* KDLoadingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDLoadingView-umbrella.h"; sourceTree = "<group>"; };
 		15D3FE98E9F2D34863BD3F3597A0485A /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		1AD65E35A3233FBE6F2EFDEB3D43D114 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		25A37D4D536CC5988A439441117C41F4 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		2D2BBF5DD0015D6E7693903FF3A771BE /* KDLoadingBlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDLoadingBlurView.swift; path = KDLoadingView/KDLoadingBlurView.swift; sourceTree = "<group>"; };
 		3ADE9E5655579DB0F79DC9C80758673C /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3F3EFEBDE6702DEFDFFF9D5C6DBC3773 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
-		4A6FBC52BC631B1FDD0B608A4EB71BCC /* KDLoadingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KDLoadingView-dummy.m"; sourceTree = "<group>"; };
+		3F73E42C381F50130286E8332D013AC6 /* KDLoadingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KDLoadingView.xcconfig; sourceTree = "<group>"; };
+		4906E1D12338DBBA7FEB55F747832183 /* KDLoadingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KDLoadingView-dummy.m"; sourceTree = "<group>"; };
+		5777EC60FC17F4B9B1CD7E95A64D4B6B /* KDLoadingExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDLoadingExtension.swift; path = KDLoadingView/KDLoadingExtension.swift; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5B81C04F8E84EAE60AE15C8695031A5F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		779FF57B0DFC023D91CF1E315E5F9667 /* KDLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KDLoadingView.h; path = KDLoadingView/KDLoadingView.h; sourceTree = "<group>"; };
-		7DA8B1F49D66F8BB2FDF8390ED8E8F42 /* KDLoadingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KDLoadingView.modulemap; sourceTree = "<group>"; };
+		5DC86CE6A31193C3F82418AD1EEFBA90 /* KDLoadingView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = KDLoadingView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5E31285A3C87F8EFE2E4F8ECA4DBA59B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6D11D929F834FF5CF7A5A1A42ECE766C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		81FD9D59E2A97D8055C6170A5713CD96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9CA0086F700A8E8317AB3E1721723087 /* KDLoadingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDLoadingView-prefix.pch"; sourceTree = "<group>"; };
-		A66B31C02E5A97E8CD4D77839E80BF65 /* KDLoadingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDLoadingView-umbrella.h"; sourceTree = "<group>"; };
 		A79AC23D5A157FED70D9C53D844B2319 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		B0926DDA391D7FE8BED55B1F1E3427C6 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC0EC1626099B6F1944D97D01DA27DD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFBF4EB14D252F8A8ED1D77B1873746D /* KDLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDLoadingView.swift; path = KDLoadingView/KDLoadingView.swift; sourceTree = "<group>"; };
+		D5322EC41F20B738353827041A89D013 /* KDLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDLoadingView.swift; path = KDLoadingView/KDLoadingView.swift; sourceTree = "<group>"; };
+		D80E9142597B569D08636071F368FFED /* KDLoadingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDLoadingView-prefix.pch"; sourceTree = "<group>"; };
 		EFC5B2E05B58CD826FD55659BF1D7E39 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F862780EDCB77F78950E139D87374DE4 /* KDLoadingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KDLoadingView.framework; path = KDLoadingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDEE47F576C9287591880006DCC653A9 /* KDLoadingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KDLoadingView.xcconfig; sourceTree = "<group>"; };
+		FE02A380B511ED4EECCE2AA324C57740 /* KDLoadingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KDLoadingView.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6B9EE9FB4260F922E779B60877DFA414 /* Frameworks */ = {
+		9FBE4F3F36F31C7F5881778CF55C7EE6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4510D1A63C19A56758048389D1EF409 /* Foundation.framework in Frameworks */,
+				CA374434C81B8FED78E8E2DDD1D9498A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,24 +72,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC7C395F92D01432819E6B2A5CD713B0 /* Foundation.framework in Frameworks */,
+				4BE8D2AD521D948F0F4BD08A84ABCEAA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1823D4B29EA11D5743B4C44E224EECF2 /* KDLoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				779FF57B0DFC023D91CF1E315E5F9667 /* KDLoadingView.h */,
-				DFBF4EB14D252F8A8ED1D77B1873746D /* KDLoadingView.swift */,
-				2C35E160E031E16DB5C615CB882F5E32 /* Support Files */,
-			);
-			name = KDLoadingView;
-			path = KDLoadingView;
-			sourceTree = "<group>";
-		};
 		1B5ECB992A56AE0C70DC72D88BB90B05 /* Pods-Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,26 +97,22 @@
 			path = "Target Support Files/Pods-Example";
 			sourceTree = "<group>";
 		};
-		2C35E160E031E16DB5C615CB882F5E32 /* Support Files */ = {
+		428139E1D66EEA3E06790FB9BD1CB04C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				CC0EC1626099B6F1944D97D01DA27DD3 /* Info.plist */,
-				7DA8B1F49D66F8BB2FDF8390ED8E8F42 /* KDLoadingView.modulemap */,
-				FDEE47F576C9287591880006DCC653A9 /* KDLoadingView.xcconfig */,
-				4A6FBC52BC631B1FDD0B608A4EB71BCC /* KDLoadingView-dummy.m */,
-				9CA0086F700A8E8317AB3E1721723087 /* KDLoadingView-prefix.pch */,
-				A66B31C02E5A97E8CD4D77839E80BF65 /* KDLoadingView-umbrella.h */,
+				5DC86CE6A31193C3F82418AD1EEFBA90 /* KDLoadingView.podspec */,
+				5E31285A3C87F8EFE2E4F8ECA4DBA59B /* LICENSE */,
+				6D11D929F834FF5CF7A5A1A42ECE766C /* README.md */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/KDLoadingView";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		4C663B01AA6BE8B2146E4FC9BFC029FC /* Pods */ = {
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1823D4B29EA11D5743B4C44E224EECF2 /* KDLoadingView */,
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
 			);
-			name = Pods;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */ = {
@@ -135,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				EF81E2A51483CCD4D25C9A6C0AC53CFB /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4C663B01AA6BE8B2146E4FC9BFC029FC /* Pods */,
 				EDBA344E52177F4AF11643CD5A2A18F0 /* Products */,
 				6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */,
 			);
@@ -145,17 +137,37 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		BDE4D4B5CEF03627E7C0E1A323A81B75 /* KDLoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				2D2BBF5DD0015D6E7693903FF3A771BE /* KDLoadingBlurView.swift */,
+				5777EC60FC17F4B9B1CD7E95A64D4B6B /* KDLoadingExtension.swift */,
+				0112F958F14CD0D2EFEFC2A8615B0AE0 /* KDLoadingView.h */,
+				D5322EC41F20B738353827041A89D013 /* KDLoadingView.swift */,
+				428139E1D66EEA3E06790FB9BD1CB04C /* Pod */,
+				BF5709CD679F3AADDE97B25C56CB1358 /* Support Files */,
 			);
-			name = iOS;
+			name = KDLoadingView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BF5709CD679F3AADDE97B25C56CB1358 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81FD9D59E2A97D8055C6170A5713CD96 /* Info.plist */,
+				FE02A380B511ED4EECCE2AA324C57740 /* KDLoadingView.modulemap */,
+				3F73E42C381F50130286E8332D013AC6 /* KDLoadingView.xcconfig */,
+				4906E1D12338DBBA7FEB55F747832183 /* KDLoadingView-dummy.m */,
+				D80E9142597B569D08636071F368FFED /* KDLoadingView-prefix.pch */,
+				13C3CAABC98F3EB8E3AE6BFC5F736EC4 /* KDLoadingView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KDLoadingView";
 			sourceTree = "<group>";
 		};
 		EDBA344E52177F4AF11643CD5A2A18F0 /* Products */ = {
@@ -167,15 +179,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EF81E2A51483CCD4D25C9A6C0AC53CFB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4D4B5CEF03627E7C0E1A323A81B75 /* KDLoadingView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4F329A3E8FFA88BCDBEB1A55F881DFDF /* Headers */ = {
+		A880F694F536BD125D90886CC250803A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91619622B24017CB972750434F438FB8 /* KDLoadingView-umbrella.h in Headers */,
-				00517285D6FD697C5537AACC9744DDBE /* KDLoadingView.h in Headers */,
+				31FCB5C5FD8806511FD97A2BF0B08B3D /* KDLoadingView-umbrella.h in Headers */,
+				029F30513B463DFE4E2055188EAA5AC5 /* KDLoadingView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,13 +210,13 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E20303113125269CAA56A76DB7C1279A /* KDLoadingView */ = {
+		B8AB136850109C737B375912AEEC0F18 /* KDLoadingView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54DDADE6B0101E0B766E71CAF5D6A46F /* Build configuration list for PBXNativeTarget "KDLoadingView" */;
+			buildConfigurationList = B831069ED9555E5BF2B099EF73742330 /* Build configuration list for PBXNativeTarget "KDLoadingView" */;
 			buildPhases = (
-				216C51A80402DE9F3CCCC63CEDFBEDFF /* Sources */,
-				6B9EE9FB4260F922E779B60877DFA414 /* Frameworks */,
-				4F329A3E8FFA88BCDBEB1A55F881DFDF /* Headers */,
+				68612DFEC9AE6AC1D0440289FFE9D40D /* Sources */,
+				9FBE4F3F36F31C7F5881778CF55C7EE6 /* Frameworks */,
+				A880F694F536BD125D90886CC250803A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -246,27 +266,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E20303113125269CAA56A76DB7C1279A /* KDLoadingView */,
+				B8AB136850109C737B375912AEEC0F18 /* KDLoadingView */,
 				EE985040F46EEBE40642DFE7F32FDACD /* Pods-Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		216C51A80402DE9F3CCCC63CEDFBEDFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				50A26E608C8E6AD8E10EF63868779B50 /* KDLoadingView-dummy.m in Sources */,
-				7C034EEE2E094B90C2EBF1A306ED0C4D /* KDLoadingView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		26A1A34C6B517FEE9D9833B7CBC7C74D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9F8B42B1971CF74021D45869D6EB481D /* Pods-Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68612DFEC9AE6AC1D0440289FFE9D40D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615639BD55A120A3496A4C81A33D6083 /* KDLoadingBlurView.swift in Sources */,
+				3C03546D2C09265D605327C645A6E10F /* KDLoadingExtension.swift in Sources */,
+				52BC76742BC5F43D3E1483F07CFAE805 /* KDLoadingView-dummy.m in Sources */,
+				443281B58870DDDF9B87ABB77166842F /* KDLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,81 +298,13 @@
 		260D6455422D123B286664EEC420FB75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KDLoadingView;
-			target = E20303113125269CAA56A76DB7C1279A /* KDLoadingView */;
+			target = B8AB136850109C737B375912AEEC0F18 /* KDLoadingView */;
 			targetProxy = EC225FAFC94B577A172EC5BAA3784A2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		50D9F8CB183627CA34F2E3AB2C783C3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFC5B2E05B58CD826FD55659BF1D7E39 /* Pods-Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6635D80C1F74B80298409DD8C2148DFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A79AC23D5A157FED70D9C53D844B2319 /* Pods-Example.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C3E37FB098AE76440E29106ADBF00CEB /* Debug */ = {
+		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -382,6 +336,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -402,20 +357,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		C5C52B77E1FEF9960D6882F3D4AE5854 /* Debug */ = {
+		2E41D76D9D469009D56226359F44CEA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDEE47F576C9287591880006DCC653A9 /* KDLoadingView.xcconfig */;
+			baseConfigurationReference = 3F73E42C381F50130286E8332D013AC6 /* KDLoadingView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -432,19 +386,123 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KDLoadingView/KDLoadingView.modulemap";
+				PRODUCT_MODULE_NAME = KDLoadingView;
 				PRODUCT_NAME = KDLoadingView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		DA03565BE765DB55C6448FB363A44481 /* Release */ = {
+		70D78907FF03DC72C282BA9860257C52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFC5B2E05B58CD826FD55659BF1D7E39 /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBFF4C264694F44AF8A39180E8D12F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A79AC23D5A157FED70D9C53D844B2319 /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E6E64260302C4F209CE6AF2A90A14C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F73E42C381F50130286E8332D013AC6 /* KDLoadingView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KDLoadingView/KDLoadingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KDLoadingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KDLoadingView/KDLoadingView.modulemap";
+				PRODUCT_MODULE_NAME = KDLoadingView;
+				PRODUCT_NAME = KDLoadingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -476,6 +534,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -493,44 +552,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		E470445BABC511DF09AB21272AB769C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDEE47F576C9287591880006DCC653A9 /* KDLoadingView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KDLoadingView/KDLoadingView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KDLoadingView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KDLoadingView/KDLoadingView.modulemap";
-				PRODUCT_NAME = KDLoadingView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -540,17 +566,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C3E37FB098AE76440E29106ADBF00CEB /* Debug */,
-				DA03565BE765DB55C6448FB363A44481 /* Release */,
+				199D972A13F2B4C56847F7A89CCA83BC /* Debug */,
+				FDB2FC4A1E5891381CD9D922145497F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54DDADE6B0101E0B766E71CAF5D6A46F /* Build configuration list for PBXNativeTarget "KDLoadingView" */ = {
+		B831069ED9555E5BF2B099EF73742330 /* Build configuration list for PBXNativeTarget "KDLoadingView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C5C52B77E1FEF9960D6882F3D4AE5854 /* Debug */,
-				E470445BABC511DF09AB21272AB769C8 /* Release */,
+				2E41D76D9D469009D56226359F44CEA7 /* Debug */,
+				E6E64260302C4F209CE6AF2A90A14C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -558,8 +584,8 @@
 		DF60E0D1B0A100B05F5579A5D0586FDB /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50D9F8CB183627CA34F2E3AB2C783C3D /* Debug */,
-				6635D80C1F74B80298409DD8C2148DFA /* Release */,
+				70D78907FF03DC72C282BA9860257C52 /* Debug */,
+				BBFF4C264694F44AF8A39180E8D12F7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

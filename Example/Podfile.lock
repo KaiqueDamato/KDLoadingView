@@ -2,11 +2,15 @@ PODS:
   - KDLoadingView (1.0.4)
 
 DEPENDENCIES:
-  - KDLoadingView (~> 1.0.0)
+  - KDLoadingView (from `../`)
+
+EXTERNAL SOURCES:
+  KDLoadingView:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  KDLoadingView: fcb015daf91c245f0a212fd52b8061621f421dfe
+  KDLoadingView: cd6c4bd267b23d661edf69601393ad068e910407
 
-PODFILE CHECKSUM: 04bc481af00d5971092e80b1f1579c28c6dcecfd
+PODFILE CHECKSUM: 9c9dbfbaae3ad6629ee2eea0e5eac566377cf565
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
