@@ -23,6 +23,9 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xcuserstate
+*.DS_Store
+Example/Example.xcworkspace/xcshareddata/
+KDLoadingView.xcodeproj/project.xcworkspace/xcshareddata/
 
 ## Obj-C/Swift specific
 *.hmap

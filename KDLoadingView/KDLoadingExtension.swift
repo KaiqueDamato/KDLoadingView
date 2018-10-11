@@ -61,8 +61,8 @@ extension KDLoadingView {
     private class func addSubviewWithTransitionAnimation(fromView: UIView, toView: UIView) {
         let transition = CATransition()
         transition.duration = 0.3
-        transition.type = kCATransitionReveal
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = CATransitionType.reveal
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         toView.layer.add(transition, forKey: nil)
         fromView.addSubview(toView)
     }
