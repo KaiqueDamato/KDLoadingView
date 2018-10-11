@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC3254C11E67D66D007BAE50 /* KDLoadingBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3254C01E67D66D007BAE50 /* KDLoadingBlurView.swift */; };
+		AC3254C31E67D697007BAE50 /* KDLoadingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3254C21E67D697007BAE50 /* KDLoadingExtension.swift */; };
 		ECAB41E71E635C000052F4CB /* KDLoadingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB41DD1E635C000052F4CB /* KDLoadingView.framework */; };
 		ECAB41EC1E635C000052F4CB /* KDLoadingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB41EB1E635C000052F4CB /* KDLoadingViewTests.swift */; };
 		ECAB41EE1E635C000052F4CB /* KDLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECAB41E01E635C000052F4CB /* KDLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC3254C01E67D66D007BAE50 /* KDLoadingBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDLoadingBlurView.swift; sourceTree = "<group>"; };
+		AC3254C21E67D697007BAE50 /* KDLoadingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDLoadingExtension.swift; sourceTree = "<group>"; };
 		ECAB41DD1E635C000052F4CB /* KDLoadingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KDLoadingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAB41E01E635C000052F4CB /* KDLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KDLoadingView.h; sourceTree = "<group>"; };
 		ECAB41E11E635C000052F4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 			children = (
 				ECAB41E01E635C000052F4CB /* KDLoadingView.h */,
 				ECAB41F71E635C2C0052F4CB /* KDLoadingView.swift */,
+				AC3254C01E67D66D007BAE50 /* KDLoadingBlurView.swift */,
+				AC3254C21E67D697007BAE50 /* KDLoadingExtension.swift */,
 				ECAB41E11E635C000052F4CB /* Info.plist */,
 			);
 			path = KDLoadingView;
@@ -203,7 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3254C31E67D697007BAE50 /* KDLoadingExtension.swift in Sources */,
 				ECAB41F81E635C2C0052F4CB /* KDLoadingView.swift in Sources */,
+				AC3254C11E67D66D007BAE50 /* KDLoadingBlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
