@@ -1,9 +1,9 @@
 # KDLoadingView
 
-[![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
-[![Xcode 8.0+](https://img.shields.io/badge/Xcode-8.0+-blue.svg?style=flat)](https://developer.apple.com/swift/)
-[![pod v1.0.0](https://img.shields.io/badge/pod-v1.0.0-blue.svg)](https://cocoapods.org)
+[![Xcode 10.0+](https://img.shields.io/badge/Xcode-10.0+-blue.svg?style=flat)](https://developer.apple.com/swift/)
+[![pod v1.0.5](https://img.shields.io/badge/pod-v1.0.5-blue.svg)](https://cocoapods.org)
 
 A beautiful loading indicator inspired by material design. 🤘🏻
 
